@@ -21,6 +21,7 @@ chrome.extension.sendMessage({}, function(response) {
                 return month[0];
             }
 
+
             //Add download link to tracks
             for (var i = 0; i < tracks.length; ++i) {
                 var element = tracks[i];
@@ -30,6 +31,7 @@ chrome.extension.sendMessage({}, function(response) {
                     var trackTitle = element.getAttribute('title');
                     var trackUrl = trackTitle.replace(/\s/g, '%20');
                     var downloadLink = document.createElement('a');
+                    downloadLink.classList.add('appended-download-link');
                     downloadLink.href = 'http://www.birp.fm/music/m/playlists/' + year + '/' + month + '-' + year + '/' + trackUrl + '.mp3';
                     downloadLink.target = '_blank';
                     downloadLink.download = trackTitle;
