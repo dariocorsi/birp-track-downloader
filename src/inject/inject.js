@@ -10,17 +10,27 @@ chrome.extension.sendMessage({}, function(response) {
 
             var tracks = document.getElementsByClassName('fap-single-track');
 
-            //Get the year and monthbased on current url structure. Should replace with smarter function.
+            var arr = [].slice.call(tracks);
+
+            var alpha = arr.filter(function(element) {
+                return element.getAttribute('title');
+            }).map(function(element) {
+                return element.innerText.trim();
+            }).sort();
+
+            console.log(alpha);
+
+            //Get the year and month based on current url structure. Should replace with smarter function.
             var pathname = window.location.pathname.split('/');
             var year = pathname[2];
             var month = getMonth(pathname[3]);
+            var playlistName = pathname[3];
 
             //Get the month from a string
             function getMonth(str) {
                 var month = str.split('-');
                 return month[0];
             }
-
 
             //Add download link to tracks
             for (var i = 0; i < tracks.length; ++i) {
