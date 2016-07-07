@@ -1,6 +1,6 @@
 {
   "name": "BIRP! Track Downloader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "Add a download link back to BIRP! playlist tracks.",
 
@@ -13,7 +13,8 @@
   "content_scripts": [
     {
       "matches": [
-        "http://www.birp.fm/playlist/*/*"
+        "http://www.birp.fm/playlist/*/*",
+        "http://www.birp.fm/user/*/favorite-playlist-tracks/"
       ],
       "js": [
         "src/inject/inject.js"
