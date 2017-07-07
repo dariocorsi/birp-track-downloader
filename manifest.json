@@ -13,7 +13,9 @@
   "content_scripts": [
     {
       "matches": [
+        "http://www.birp.fm/",
         "http://www.birp.fm/playlist/*/*",
+        "http://www.birp.fm/artist/*",
         "http://www.birp.fm/user/*/favorite-playlist-tracks/"
       ],
       "js": [

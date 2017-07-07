@@ -6,6 +6,15 @@ Adds a 'Download Track' button to single tracks in [BIRP!](www.birp.fm) playlist
 
 ##Change Log
 
+
+###0.0.4
+
+- Fixed for updated BIRP! site design
+
+###0.0.3
+
+- Added support for favorites playlists
+
 ###0.0.2
 
 - Added support for *all* playlists
